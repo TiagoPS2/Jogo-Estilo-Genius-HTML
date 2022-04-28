@@ -1,3 +1,4 @@
+//Variaveis de pontuações
 let ordem = []
 let clickOrdem = []
 let score = 0
@@ -7,10 +8,20 @@ let score = 0
 //2 = amarelo
 //3 = azul
 
-const blue = document.getElementsByClassName(`#blue`)
-const red = document.getElementsByClassName(`#red`)
-const green = document.getElementsByClassName(`#green`)
-const yellow = document.getElementsByClassName(`#yellow`)
+//Audios
+const audio = [
+  new Audio('assets/0.mp3'),
+  new Audio('assets/1.mp3'),
+  new Audio('assets/2.mp3'),
+  new Audio('assets/3.mp3')
+]
+var somGameOver = document.getElementById('GameOver')
+
+const blue = document.querySelector('.blue')
+const red = document.querySelector('.red')
+const green = document.querySelector('.green')
+const yellow = document.querySelector('.yellow')
+//const startButton = document.querySelector('.start-button')
 
 //Cria ordem aleatoria de cores
 let shuffleOrdem = () => {
@@ -20,19 +31,20 @@ let shuffleOrdem = () => {
 
   for (let i in ordem) {
     let elementColor = createColorElement(ordem[i])
-    ligthColor(elementColor, Number(i) + 1)
+    lightColor(elementColor, Number(i) + 1, ordem[i])
   }
 }
 
 //Acende a proxima cor
-let ligthColor = (element, number) => {
-  number = number * 500
+let lightColor = (elementColor, number, color) => {
+  number = number * 600
   setTimeout(() => {
-    element.classList.add('selected')
-  }, number - 250)
+    audio[color].play()
+    elementColor.classList.add('selected')
+  }, number - 400)
   setTimeout(() => {
-    element.classList.remove('selected')
-  })
+    elementColor.classList.remove('selected')
+  }, number)
 }
 
 //Checa se os botões clicados são os mesmo da ordem generada
@@ -45,7 +57,9 @@ let checkOrdem = () => {
   }
 
   if (clickOrdem.length == ordem.length) {
-    alert(`Pontuação:  ${score}\n Você acertou! Iniciando próximo nível!`)
+    window.alert(
+      `Pontuação:  ${score}\n Você acertou! Iniciando próximo nível!`
+    )
     nextLevel()
   }
 }
@@ -53,16 +67,17 @@ let checkOrdem = () => {
 //Funçao para o clique do usuario
 let click = color => {
   clickOrdem[clickOrdem.length] = color
-  createColorElement(color).classList.add('#selected')
+  createColorElement(color).classList.add('selected')
+  audio[color].play()
 
   setTimeout(() => {
-    createColorElement(color).classList.remove('#selected')
+    createColorElement(color).classList.remove('selected')
     checkOrdem()
   }, 250)
 }
 
 //Função que retorna a cor
-let createColorElement = () => {
+let createColorElement = color => {
   if (color == 0) {
     return green
   } else if (color == 1) {
@@ -82,32 +97,21 @@ let nextLevel = () => {
 
 //Função para gamer over
 let gameOver = () => {
-  alert(
-    `Pontuação: ${score}\nVoce perdeu o Jogo!\Clique em OK para iniciar um novo jogo`
-  )
+  somGameOver.play()
+  alert(`${score}\nVoce perdeu o Jogo!\Clique em OK para iniciar um novo jogo`)
   ordem = []
   clickOrdem = []
-  playGame()
 }
 
 //Função de inicio de jogo
 let playGame = () => {
-  alert('Bem vindo ao Gênesis! Iniciando novo jogo')
   score = 0
-
+  lightColor()
   nextLevel()
 }
 
 //Eventos de click para as cores
-
-green.addEventListener('click', click(0))
-red.addEventListener('click', click(1))
-yellow.addEventListener('click', click(2))
-blue.addEventListener('click', click(3))
-
 green.onclick = () => click(0)
 red.onclick = () => click(1)
 yellow.onclick = () => click(2)
 blue.onclick = () => click(3)
-
-playGame()
