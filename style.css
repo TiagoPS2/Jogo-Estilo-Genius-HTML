@@ -2,6 +2,7 @@ body{
   background-color: gainsboro;
 }
 .main-game{
+  font-family: 'Courier New', Courier, monospace;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -13,36 +14,86 @@ body{
   grid-template-areas: 'verde vermelho'
   'amarelo azul';
   grid-gap: 10px;
-  border: 9px solid black;
-  background-color: white;
+  border: 30px solid black;
+  background-color: black;
   border-radius: 100%;
-  width: 700px;
-  height: 700px;
+  width: 600px;
+  height: 600px;
 }
 
 .blue{
   grid-area: azul;
   background-color: blue;
   border-bottom-right-radius: 100%;
+  border: 5px solid black;
 }
 .green{
   grid-area: verde;
   background-color: green;
   border-top-left-radius: 100%;
+  border: 5px solid black;
 }
 
 .red{
   grid-area: vermelho;
   background-color: red;
   border-top-right-radius: 100%;
+  border: 5px solid black;
 }
 
 .yellow{
   grid-area: amarelo;
   background-color: yellow;
   border-bottom-left-radius: 100%;
+  border: 5px solid black;
 }
 
 .selected{
-  opacity: 0.8;
+  opacity: 0.6;
 }
+
+.menu {
+  position: absolute;
+  display: grid;
+  grid-template-areas: 'Start ' ' Restart';
+  position: center;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: black 15px solid;
+}
+.start-button {
+  text-align: center;
+  grid-area: Start;
+  font-size: 30px;
+  font-weight: 900;
+  color: rgb(61, 61, 61);
+  padding: 40px 25px;
+  border-radius:100% 100% 50% 50%;
+  background-color: whitesmoke;
+  opacity: 0.8;
+  cursor: pointer;
+  
+}
+.restart-button{
+  text-align: center;
+  grid-area: Restart;
+  font-size: 30px;
+  font-weight: 900;
+  color: rgb(61, 61, 61);
+  padding:40px 25px;
+  border-radius: 50% 50% 100% 100%;
+  background-color: whitesmoke;
+  opacity: 0.8;
+  cursor: pointer;
+  
+}
+
+.start-button:hover, .restart-button:hover {
+  opacity: 1;
+}
+
+
