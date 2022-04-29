@@ -21,7 +21,6 @@ const blue = document.querySelector('.blue')
 const red = document.querySelector('.red')
 const green = document.querySelector('.green')
 const yellow = document.querySelector('.yellow')
-//const startButton = document.querySelector('.start-button')
 
 //Cria ordem aleatoria de cores
 let shuffleOrdem = () => {
