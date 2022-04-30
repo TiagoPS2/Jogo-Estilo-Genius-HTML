@@ -1,7 +1,7 @@
 # Jogo-Estilo-Genius-HTML
 ---
 
-Projeto desenvolvido com instruções de [Gabriela Pinheiro] na trilha de estudo do Bootcamp "JavaScript Game Developer" da [dio.me].
+Projeto desenvolvido com instruções de [Gabriela Pinheiro] na trilha de estudo do Bootcamp "DIO Orbi Web Games" da [dio.me].
 
 <p align="center">
 	<img alt="Repository language count" src="https://img.shields.io/github/languages/count/TiagoPS2/Jogo-Estilo-Genius-HTML">
