@@ -4,7 +4,7 @@
 Projeto desenvolvido com instruções de [Gabriela Pinheiro] na trilha de estudo do Bootcamp "JavaScript Game Developer" da [dio.me].
 
 <p align="center">
-	<img alt="Repository language count" src="https://img.shields.io/github/languages/count/didifive/jogo-da-memoria-dio">
+	<img alt="Repository language count" src="https://img.shields.io/github/languages/count/TiagoPS2/Jogo-Estilo-Genius-HTML">
 	<a href="https://www.linkedin.com/in/gabrielapinheiro129/">
 		<img alt="Made by Gabriela" src="https://img.shields.io/badge/made%20by-Gabriela-blue">
 	</a>
@@ -12,7 +12,7 @@ Projeto desenvolvido com instruções de [Gabriela Pinheiro] na trilha de estudo
 		<img alt="Update by TiagoPS2" src="https://img.shields.io/badge/update%20by-TiagoPS2-green">
 	</a>
 	<a href="https://github.com/TiagoPS2/Jogo-Estilo-Genius-HTML/commits/main">
-		<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/didifive/jogo-da-memoria-dio?color=blue">
+		<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/TiagoPS2/Jogo-Estilo-Genius-HTML?color=blue">
 	</a>
 </p>
 
