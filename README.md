@@ -31,6 +31,7 @@ Projeto desenvolvido com instruções de [Gabriela Pinheiro] na trilha de estudo
 Link da base utilizada neste projeto: [SpruceGabriela/jogo-da-memoria-dio].
 
 ### Previa do jogo abaixo:
+ - Teste o jogo aqui: https://geniusjogohtml.netlify.app
 ![unknown](https://user-images.githubusercontent.com/102334852/165835162-51504bf0-3adc-46b9-9a18-812061c08fcd.png)
 
 ---
